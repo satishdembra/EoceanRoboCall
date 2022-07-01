@@ -29,6 +29,7 @@ public class User {
     @CreationTimestamp
     private Timestamp createdDate;
     private int account_code;
+    private boolean status;
     private String extraFields;
 
     @Override
@@ -41,5 +42,8 @@ public class User {
                 ", account_code=" + account_code +
                 ", extraFields='" + extraFields + '\'' +
                 '}';
+    }
+    boolean isEnabled(){
+        return status;
     }
 }

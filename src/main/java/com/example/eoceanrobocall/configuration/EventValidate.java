@@ -2,7 +2,6 @@ package com.example.eoceanrobocall.configuration;
 
 import org.springframework.context.annotation.Configuration;
 
-@Configuration
 public class EventValidate {
 //        @Bean
 //        public ValidatingMongoEventListener validatingMongoEventListener() {

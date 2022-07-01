@@ -15,18 +15,18 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/campaigns")
 @AllArgsConstructor
 public class CSVController {
-    private JobLauncher jobLauncher;
-    private Job job;
+//    private JobLauncher jobLauncher;
+//    private Job job;
 
 
-    public void importCsvToTable(){
-        JobParameters jobParameters = new JobParametersBuilder().addLong("startAt", System.currentTimeMillis()).toJobParameters();
-        try{
-            jobLauncher.run(job, jobParameters);
-
-        } catch (JobInstanceAlreadyCompleteException | JobExecutionAlreadyRunningException | JobParametersInvalidException | JobRestartException e) {
-            e.printStackTrace();
-            throw new Exception(e.getMessage(), HttpStatus.BAD_REQUEST);
-        }
-    }
+//    public void importCsvToTable(){
+//        JobParameters jobParameters = new JobParametersBuilder().addLong("startAt", System.currentTimeMillis()).toJobParameters();
+//        try{
+//            jobLauncher.run(job, jobParameters);
+//
+//        } catch (JobInstanceAlreadyCompleteException | JobExecutionAlreadyRunningException | JobParametersInvalidException | JobRestartException e) {
+//            e.printStackTrace();
+//            throw new Exception(e.getMessage(), HttpStatus.BAD_REQUEST);
+//        }
+//    }
 }

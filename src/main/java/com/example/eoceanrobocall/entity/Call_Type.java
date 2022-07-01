@@ -12,11 +12,7 @@ import javax.persistence.*;
 @Entity
 @Table(name = "Call_type")
 public class Call_Type {
-    @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
-    @ManyToOne(fetch = FetchType.LAZY,optional = false)
-    @JoinColumn(name = "userId", referencedColumnName = "id")
-    private User user;
+    @EmbeddedId
+    private Call_TypeId call_typeId;
     private String title;
 }
